@@ -15,7 +15,7 @@ function QuoteGenerator() {
     setError("");
     setFade(false);
     try {
-      const res = await axios.get(`${BACKEND_URL}/api/quote`);
+      const res = await axios.get(`https://info-hub-challenge-lb9m.vercel.app/api/quote`);
       setQuote(res.data.quote);
       setFade(true);
     } catch {
