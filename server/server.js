@@ -81,6 +81,10 @@ app.get("/api/currency", async (req, res) => {
   }
 });
 
+
+app.get("/", (req, res) => {
+  res.send("InfoHub Challenge Backend is running.");
+});
 // SERVER START
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
