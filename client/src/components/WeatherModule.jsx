@@ -18,7 +18,7 @@ function WeatherModule() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get(`${BACKEND_URL}/api/weather?city=${city}`);
+      const res = await axios.get(`https://info-hub-challenge-lb9m.vercel.app/api/weather?city=${city}`);
       setWeather(res.data);
       console.log(res.data);
       console.log("Weather data fetched successfully");
