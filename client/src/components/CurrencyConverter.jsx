@@ -18,7 +18,7 @@ function CurrencyConverter() {
     setError("");
     try {
       const res = await axios.get(
-        `${BACKEND_URL}/api/currency?amount=${amount}`
+        `https://info-hub-challenge-lb9m.vercel.app/api/currency?amount=${amount}`
       );
       setData(res.data);
     } catch {
