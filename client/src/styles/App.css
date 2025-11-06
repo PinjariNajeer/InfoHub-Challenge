@@ -1,0 +1,106 @@
+/* 🌈 General Layout */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ✨ Heading */
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #00c6ff, 0 0 20px #0072ff;
+  }
+  to {
+    text-shadow: 0 0 25px #00c6ff, 0 0 40px #0072ff;
+  }
+}
+
+/* 💡 Button Group */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 🎯 Buttons */
+.nav-btn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px #2575fc, 0 0 40px #6a11cb;
+}
+
+/* 🌟 Active Button Highlight */
+.nav-btn.active {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  box-shadow: 0 0 25px #ff512f, 0 0 50px #dd2476;
+  transform: scale(1.1);
+}
+
+/* 🧩 Module Section */
+.module-section {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+  .nav-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .module-section {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
